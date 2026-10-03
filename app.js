@@ -67,6 +67,7 @@ function completeSet(e,s){const k=keyFor(e,s);const ex=currentDay().exercises[e]
 function parseRest(txt){const m=String(txt).match(/(\d+)\s*-\s*(\d+)/);if(m)return (+m[1])*60;const n=String(txt).match(/(\d+)/);return n?+n[1]*60:90}
 function startRest(txt){state.rest={running:true,end:Date.now()+parseRest(txt)*1000,seconds:parseRest(txt),display:state.rest.display||'normal'};primeAudio();save();workout();}
 function startRestFixed(sec){state.rest={running:true,end:Date.now()+sec*1000,seconds:sec,display:state.rest.display||'normal'};primeAudio();save();workout();}
+function adjustRest(sec){if(!state.rest.running){startRestFixed(sec);return}state.rest.end+=sec*1000;state.rest.seconds=Math.max(0,Math.ceil((state.rest.end-Date.now())/1000));save();workout();}
 function cancelRest(){state.rest={running:false,end:0,seconds:0,display:state.rest.display||'normal'};save();workout();}
 function setRestDisplay(mode){state.rest.display=mode;save();workout();}
 function startSessionTicker(){clearInterval(window.sessionTimer);const tick=()=>{const s=state.session;if(!s||!s.started||s.paused)return;const el=document.getElementById('sessionClock');if(el)el.textContent=fmtTime(workoutElapsed());window.sessionTimer=requestAnimationFrame(tick)};window.sessionTimer=requestAnimationFrame(tick)}
