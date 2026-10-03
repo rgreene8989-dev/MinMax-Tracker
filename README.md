@@ -38,3 +38,10 @@ Open the same URL in Edge or Chrome and use the browser's **Install this site as
 
 ## Data
 Workout history is stored locally in the browser/device. Use **Backup Data** periodically. Use **Restore Data** to recover a backup JSON file.
+
+
+## v3 updates
+- Added a prominent INFO / LOOKUP button inside active workouts.
+- Added searchable quick-reference lookup for acronyms, RIR, ROM, progression, rest and Block 2 intensity techniques.
+- Added the instructional YouTube demo link from the source PDF to every programmed exercise.
+- Updated service-worker cache version so the new app assets can replace the prior cached version.
