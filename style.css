@@ -9,3 +9,20 @@
 .start-workout-btn{background:#f2f3f5;color:#0c0e12;min-width:180px}.set-row.completed{opacity:.78}.rest-small .timer{font-size:20px}.rest-small{padding-top:8px;padding-bottom:8px}.rest-small .timer-buttons .smallbtn{min-height:34px;padding:0 9px;font-size:12px}.rest-hidden{padding-top:8px;padding-bottom:8px}.rest-hidden .stat{font-size:11px}
 
 .start-workout-btn{background:#f2f3f5;color:#0c0e12;min-width:180px}.set-row.completed{opacity:.78}.rest-small .timer{font-size:20px}.rest-small{padding-top:8px;padding-bottom:8px}.rest-small .timer-buttons .smallbtn{min-height:34px;padding:0 9px;font-size:12px}.rest-hidden{padding-top:8px;padding-bottom:8px}.rest-hidden .stat{font-size:11px}
+
+/* v7 mobile layout refinements */
+.pill-done{background:#203a2a;color:#9ce2ad}
+@media(max-width:600px){
+ .workout-tools{top:65px;padding-bottom:6px}
+ .workout-tools .actions{gap:6px}
+ .workout-tools .actions .btn{flex:0 1 auto;min-height:36px;padding:0 10px;border-radius:10px;font-size:11px;line-height:1.1;white-space:nowrap}
+ .workout-tools .start-workout-btn{min-width:0}
+ .restbar{position:sticky;bottom:calc(62px + env(safe-area-inset-bottom));z-index:25;padding:5px 9px calc(5px + env(safe-area-inset-bottom));margin:8px 0 0;border:1px solid #2b303a;border-radius:12px}
+ .restbar .stat{font-size:10px}
+ .restbar .timer{font-size:18px;letter-spacing:0}
+ .restbar .timer-row{gap:6px}
+ .restbar .timer-buttons{gap:5px;padding-bottom:0}
+ .restbar .timer-buttons .smallbtn{min-height:30px;padding:0 8px;font-size:11px;border-radius:8px}
+ .restbar .progressbar{height:3px;margin-top:5px}
+ .app{padding-bottom:94px}
+}
